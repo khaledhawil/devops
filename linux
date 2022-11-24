@@ -1,0 +1,133 @@
+
+chmod -R for the directory and all files in directory !!
+chmod  u for owner , g for groups , o for others users !
+
+
+for exmpels :
+  chmod u+rwx file ,  for all permission at file 
+
+read-r = 4
+write- w = 2
+execute x =  1 
+ $$$
+for exmple : 
+ 
+ 
+ chmod 741 file .
+
+
+-to change file group ! :
+chgrp the groupname , filename 
+
+
+-to change umask :
+nano .bashrc 
+
+- to add user to group :
+gpasswd -a  username groupname ,
+
+- to add user to sudoer file :
+ nano /etc/sudoers 
+username   ALL(ALL)    ALL 
+
+- to show the number of lines :
+
+for exmple i want to show 13,14,15
+ 
+
+head -n15 /etc/passwd | tail -n3
+
+
+- to save the output and error  from any opretion :
+  
+2&>the filename
+
+- to change the hostname  :
+hostnamectl  set-hostname  khaled
+
+-to manage the Network  :
+
+nmtui OR   nmcli 
+- to start ot stop service  :
+
+service   servicename    stop or start or  status
+
+-to change taime or timezone :
+
+timedatectl   set-timezone   "Africa/Cairo"
+
+-to   conect to server   :
+ssh    servername@server  ip
+
+-to copy file frome device  to device    :
+
+scp   -r    filename        devicename@deviceip:~
+
+
+- ps   / ps aux   /  ps aux |  grep  -i  chrome  
+ pgrep  chrome  
+pkill    chrome  
+pkill   -u  luka
+pkuil  -v  -u luka 
+nice   -15   cp fi /Desktop  
+renice   -n  -15  firefox
+renice  -n 5  firfox
+
+
+
+-  to archive or extract   file:
+tar   -cvf   file.tar    f1 f2 f3     -   to   archive file
+tar   -xcf   file.tar    to   extract   file.tar
+tar   -tcf   file.tar    to   list or ls file.tar
+   
+to add hard disk to your linux OR  to show your disk in linux :
+
+for i in {1..32} ; do echo "- - -" > /sys/class/scsi_host/hsot$i/scan ; done
+
+- to make file sys or partition   :
+1-  creat pt
+2- mkfs 
+3- mount 
+4- prisistent   OR    nano   /etc/fstab 
+ 
+
+to make sawp fiel :
+1-  creat pt
+2- mksawp
+3- swapon/off
+4- prisistent   OR    nano   /etc/fstab
+5- swapon -av
+
+ fdisk   /dev/sdc ..   n 
+mkfs /dev/sdc1
+mount /dev/sdc1    /date1   or and directory you created it
+mount  -av 
+
+others command  :
+nano   /etc/fstab
+
+cat   /etc/mtab
+blkid  
+
+-LVM manager 
+
+1- pvcreate   /dev/sdc1   /dev/sdb1
+1.1- pvdisplay 
+2-vgcreate   VGname      /dev/sdc1   /dev/sdb1
+2.1- vgdisplay
+3-vgremove  VNname 
+####
+lvextend    -r    -L +50G     
+lvreduse   -r  -L    -50g
+
+
+ 
+
+
+ 
+
+
+
+
+
+
